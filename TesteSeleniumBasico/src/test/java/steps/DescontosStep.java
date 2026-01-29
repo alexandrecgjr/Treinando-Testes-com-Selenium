@@ -8,11 +8,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import runner.RunCucumberTest;
 
 
-public class DescontosStep {
+public class DescontosStep extends RunCucumberTest {
 
-    WebDriver driver = new ChromeDriver();
+
 
     @Dado("^que estou no site da qazando")
     public void acessar_site_qazando() {
@@ -42,7 +43,6 @@ public class DescontosStep {
 
         Assert.assertEquals("O cupom está errado!", "QAZANDO15OFF", texto_cupom);
 
-        driver.quit();
     }
 
 }
